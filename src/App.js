@@ -8,6 +8,7 @@ import {
 import Home from './components/Home'
 import Procedures from './components/Procedures'
 import Contact from './components/Contact'
+import WidgetShow from './components/WidgetShow';
 
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route exact path='/' component={Home}/>
         <Route path='/procedures' render={()=> <Procedures procedures={procedures} />}/>
         <Route path='/contact' component={Contact}/>
+        <Route path="/widgets/:id" render={(props)=> <WidgetShow procedures={procedures} {...props}/>}/>
       </div>
     </Router>
   );
